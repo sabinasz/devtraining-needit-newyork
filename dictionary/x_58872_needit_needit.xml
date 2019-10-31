@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Needit" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element label="Integration" max_length="40" name="integration" type="string"/>
+        <element label="new 2 ss" max_length="40" name="new_2_ss" type="integer"/>
+        <element label="New field 1" max_length="40" name="new_field_1" type="integer"/>
+        <element label="New field 2" max_length="40" name="new_field_2" type="integer"/>
+        <element label="new field 3 ss" max_length="40" name="new_field_3_ss" type="integer"/>
+        <element label="New field ss 4" max_length="40" name="new_field_ss_4" type="integer"/>
+        <element label="new filed ss" max_length="40" name="new_filed_ss" type="integer"/>
+        <element label="new ss" max_length="40" name="new_ss" type="integer"/>
+        <element label="New Due Date" max_length="40" name="u_due_date_1" type="due_date"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="tr" label="Request Type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="human" sequence="0" value="hr"/>
+                <element inactive="true" inactive_on_update="true" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="travel" sequence="1" value="tr"/>
+                <element inactive="true" inactive_on_update="true" label="Choice 3" sequence="2" value="Choice 3"/>
+                <element inactive_on_update="false" label="finance" sequence="2" value="finance"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Requested for" mandatory="true" max_length="40" name="u_sys_user" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal 1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="human resources 1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="human resources 2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="facilities 1" sequence="2" value="facilities 1"/>
+                <element inactive_on_update="false" label="facilities 2" sequence="3" value="facilities 2"/>
+                <element inactive_on_update="false" label="legal 1" sequence="4" value="legal 1"/>
+                <element inactive_on_update="false" label="legal 2" sequence="5" value="legal 2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed?" mandatory="true" max_length="40" name="u_when_needed" type="calendar_date_time"/>
+    </element>
+</database>
